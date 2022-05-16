@@ -1,0 +1,180 @@
+/* CSS RESET */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* MAIN CSS */
+
+
+
+/* HEADER :- */
+/* The whole Navbar */
+header{
+  font-weight: 700;
+  font-size: 2em;
+  text-align: center;
+  background-color: #9400d3;
+  color: white;
+  padding: 1em;
+  border-bottom: 1px solid black;
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+}
+
+/* Title of the APP */
+header h1{
+  display: block;
+}
+
+/* Input todos */
+#todo{
+  width: 300px;
+  height: 30px;
+}
+
+/* Input Placeholder */
+#todo::placeholder{
+  color: blue;
+}
+
+/* Add Button */
+#add{
+  position: relative;
+  right: 0.67em;
+  border: none;
+  height: 2.6em;
+  top: 0.04em;
+  width: 5em;
+  background-color: lightcyan;
+  color: darkblue;
+  font-weight: 500;
+}
+
+/* Add Button on Hover */
+#add:hover{
+  transition: 0.5s;
+  border-start-end-radius: 20%;
+  border-end-end-radius: 20%;
+  background-color:rgb(64, 255, 0) !important;
+  cursor: pointer;
+  transform: scaleX(1.2);
+  transform-origin: left center;
+}
+
+/* Todos :- */
+/* All todos */
+li{
+  font-size: 2.8em;
+}
+
+/* Odd todos */
+li:nth-of-type(2n+1){
+  background-color: #f5fdff;
+}
+
+/* Even todos */
+li:nth-of-type(2n){
+  background-color: #ddfcfe;
+}
+
+/* todos styling */
+ul li {
+  position:relative;
+  padding: 12px 8px 12px 40px;
+  top: 137px;
+}
+
+/* add tick when checked class is added to todos before their text */
+ul li.checked::before {
+  content: '';
+  position: absolute;
+  border-color: #000;
+  border-style: solid;
+  border-width: 0 4px 4px 0;
+  top: 0.6em;
+  left: 16px;
+  transform: rotate(45deg);
+  height: 15px;
+  width: 7px;
+}
+
+/* line-through the text of todos when checked class is added */
+ul li.checked{
+  text-decoration: line-through;
+}
+
+/* todos on hover, add a border */
+ul li:hover{
+  border: 1px solid black;
+}
+
+/* stylings of delete button */
+.close{
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 12px 16px 12px 16px;
+}
+
+/* delete button on hover */
+.close:hover {
+  cursor: pointer;
+  color: red;
+}
