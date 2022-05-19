@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="form.css">
+  <title>Registration Form</title>
+</head>
+<body>
+  <header>
+    <h1>Register</h1>
+    <h2>Student Enrollment Form</h2>
+  </header>
+  <br>
+  <section id="left">
+    <div class="input">
+      <label for="name" class="entry">Name</label>
+      <input type="text" name="name" id="name" class="round">  
+    </div>
+    <div class="input">
+      <label for="email" class="entry">Email</label>
+      <input type="email" name="email" id="email" class="round">  
+    </div>
+    <div class="input">
+      <label for="website" class="entry">Website</label>
+      <input type="text" name="website" id="website" class="round">  
+    </div>
+    <div class="input">
+      <label for="img" class="entry">Image Link</label>
+      <input type="text" name="img" id="img" class="round">
+    </div>
+    <div class="input">
+      <div class="entry">Gender</div>
+      <input type="radio" name="gender" id="male">
+      <label for="male">Male</label><br>
+      <div class="entry"></div>
+      <input type="radio" name="gender" id="female">
+      <label for="female">Female</label>
+    </div>
+    <div class="input">
+      <div class="entry">Skill</div>
+      <input type="checkbox" name="skill" id="java">
+      <label for="java">Java</label>
+      <input type="checkbox" name="skill" id="html">
+      <label for="html">HTML</label>
+      <input type="checkbox" name="skill" id="css">
+      <label for="css">CSS</label>
+    </div>
+    <div class="input">
+      <button id="add">Enroll Student</button>
+      <button id="clear">Clear</button>
+    </div>
+    
+    
+  </section>
+
+  <div class = "vertical"></div>
+
+  <section id="right">
+    <h1>Enrolled Students</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Description</th>
+          <th>Image</th>
+        </tr>
+      </thead>
+      <tbody id="students">
+      </tbody>
+    </table>
+  </section>
+
+  <script src="form.js"></script>
+</body>
+</html>
