@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="calculator.css">
+  <title>Document</title>
+</head>
+<body>
+  
+  <section class="historyHeading">
+    <h1 class="history">History</h1>
+    <hr>  
+  </section>
+  <ul id="ul"></ul>
+  <section class="scale">
+    <header>
+      <input type="text" id="viewScreen">
+    </header>
+    <section>
+      <table>
+        <tbody>
+          <tr>
+            <td><button id="percent" onclick="resultPercentage()">&#37;</button></td>
+            <td><button id="CE" onclick="onCE()">CE</button></td>
+            <td><button>C</button></td>
+            <td><button id="back" onclick="backSpace()">x</button></td>
+          </tr>
+          <tr>
+            <td><button id="oneByX" onclick="onOneByX()"><sup>1</sup><span class="divideSymbol">/</span><span class="xSymbol">x</span></button></td>
+            <td><button id="square" onclick="onSquare()"><span class="multiplySymbol">x</span><sup>2</sup></button></td>
+            <td><button id="squareRoot" onclick="onSquareRoot()">&radic;x</button></td>
+            <td><button id="divide" onclick="clearZeros(),appendValue('/')">&#247;</button></td>
+          </tr>
+          <tr>
+            <td><button id="seven" onclick="clearZeros(),appendValue('7')">7</button></td>
+            <td><button id="eight" onclick="clearZeros(),appendValue('8')">8</button></td>
+            <td><button id="nine" onclick="clearZeros(),appendValue('9')">9</button></td>
+            <td><button id="multiply" onclick="clearZeros(),appendValue('*')">&#215;</button></td>
+          </tr>
+          <tr>
+            <td><button id="four" onclick="clearZeros(),appendValue('4')">4</button></td>
+            <td><button id="five" onclick="clearZeros(),appendValue('5')">5</button></td>
+            <td><button id="six" onclick="clearZeros(),appendValue('6')">6</button></td>
+            <td><button id="minus" onclick="clearZeros(),appendValue('-')">&#8722;</button></td>
+          </tr>
+          <tr>
+            <td><button id="one" onclick="clearZeros(),appendValue('1')">1</button></td>
+            <td><button id="two" onclick="clearZeros(),appendValue('2')">2</button></td>
+            <td><button id="three" onclick="clearZeros(),appendValue('3')">3</button></td>
+            <td><button id="add" onclick="clearZeros(),appendValue('+')">&#43;</button></td>
+          </tr>
+          <tr>
+            <td><button id="invert" onclick="invert()">&#43;/&#8722;</button></td>
+            <td><button id="zero" onclick="clearZeros(),appendValue('0')">0</button></td>
+            <td><button id="decimal" onclick="appendValue('.')">.</button></td>
+            <td><button id="evaluate" onclick="result()">&#61;</button></td>
+          </tr>
+        </tbody>
+    
+      </table>
+    </section>
+  </section>
+
+  <script src="calculator.js"></script>
+</body>
+</html>
